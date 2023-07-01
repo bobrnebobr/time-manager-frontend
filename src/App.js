@@ -1,13 +1,16 @@
 import React from 'react';
-import Header from './components/Header';
-import AddTaskButton from "./components/AddTaskButton";
+import Home from "./pages/Home";
+import NewTask from "./pages/NewTask";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
-      <>
-          <Header />
-          <AddTaskButton />
-      </>
+      <Router>
+          <Routes>
+              <Route exact path="/" exact element={<Home />}/>
+              <Route path="/new_task" element={<NewTask />}/>
+          </Routes>
+      </Router>
   );
 }
 
