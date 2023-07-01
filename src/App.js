@@ -7,7 +7,7 @@ function App() {
   return (
       <Router>
           <Routes>
-              <Route exact path="/" exact element={<Home />}/>
+              <Route exact path="/" element={<Home />}/>
               <Route path="/new_task" element={<NewTask />}/>
           </Routes>
       </Router>
